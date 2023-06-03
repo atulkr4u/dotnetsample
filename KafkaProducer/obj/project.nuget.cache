@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "KMo6x6HYbs/LuKo+cHxI/VgaaQVbWrC7GYiCpTKmZlE8yRFriV35Am7/2v0caj7oHfxQNL05mywL+GEET5DKOg==",
+  "success": true,
+  "projectFilePath": "/Users/atul/dotnetsample/dotnetsample/KafkaProducer/KafkaProducer.csproj",
+  "expectedPackageFiles": [
+    "/Users/atul/.nuget/packages/confluent.kafka/1.7.0/confluent.kafka.1.7.0.nupkg.sha512",
+    "/Users/atul/.nuget/packages/librdkafka.redist/1.7.0/librdkafka.redist.1.7.0.nupkg.sha512",
+    "/Users/atul/.nuget/packages/system.memory/4.5.0/system.memory.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
