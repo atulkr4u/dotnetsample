@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/atul/github/dotnetsample/DapperExtender/DapperExtender.csproj": {}
+  },
+  "projects": {
+    "/Users/atul/github/dotnetsample/DapperExtender/DapperExtender.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/atul/github/dotnetsample/DapperExtender/DapperExtender.csproj",
+        "projectName": "DapperExtender",
+        "projectPath": "/Users/atul/github/dotnetsample/DapperExtender/DapperExtender.csproj",
+        "packagesPath": "/Users/atul/.nuget/packages/",
+        "outputPath": "/Users/atul/github/dotnetsample/DapperExtender/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/atul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.138, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

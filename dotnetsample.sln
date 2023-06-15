@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaConsumer", "KafkaConsu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaMultiConsumer", "KafkaMultiConsumer\KafkaMultiConsumer.csproj", "{F58A2A45-FE45-44B9-9734-8EB9DBE31F36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExtender", "DapperExtender\DapperExtender.csproj", "{C0F26E70-AFE9-45B6-BE0B-7AAA6302A0C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F58A2A45-FE45-44B9-9734-8EB9DBE31F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F58A2A45-FE45-44B9-9734-8EB9DBE31F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F58A2A45-FE45-44B9-9734-8EB9DBE31F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F26E70-AFE9-45B6-BE0B-7AAA6302A0C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F26E70-AFE9-45B6-BE0B-7AAA6302A0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F26E70-AFE9-45B6-BE0B-7AAA6302A0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F26E70-AFE9-45B6-BE0B-7AAA6302A0C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
