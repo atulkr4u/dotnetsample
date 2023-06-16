@@ -10,25 +10,17 @@ namespace DapperExtender.DapperExtention
     {
         private static string connectionString = ""; // Replace with your actual database connection string
 
-        public static T Query<T>(object parameters)
+        public static async Task<T> Query<T>(this object parameters,string command)
         {
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
-                //var command = parameters.QueryName;
-
-                var command = parameters.GetType().GetCustomAttribute<QueryNameAttribute>().QueryName;
-
                 return connection.QuerySingleOrDefault<T>(command, parameters, commandType: CommandType.StoredProcedure);
             }
         }
-        public async static Task<IEnumerable<T>> QueryAll<T>(object parameters)
+        public async static Task<IEnumerable<T>> QueryAll<T>(this object parameters,string command)
         {
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
-                //var command = parameters.QueryName;
-
-                var command = parameters.GetType().GetCustomAttribute<QueryNameAttribute>().QueryName;
-
                 return await connection.QueryAsync<T>(command, parameters, commandType: CommandType.StoredProcedure);
             }
         }

@@ -8,12 +8,12 @@ public class Program
     {
         try
         {
-            ActiveSessionResult result = DapperWrapper.Query<ActiveSessionResult>(new ActiveSessionQuery { EmployeeID = "BPW41175" });
+            var result = await  new ActiveSessionQuery { EmployeeID = "BPW41175" }.Query<ActiveSessionResult>("[BMS2].[GetActiveSession]");
             Console.WriteLine(result.SessionId);
 
             Console.WriteLine("---------");
-            List<ActiveSessionResult> result2 = DapperWrapper.QueryAll<ActiveSessionResult>(new ActiveAllSessionQuery { EmployeeID = "BPW41175" }).Result.ToList();
-            var top5 = result2.Take(5);
+            var resultAll = await new ActiveSessionQuery { EmployeeID = "BPW41175" }.QueryAll<ActiveSessionResult>("[BMS2].[GetAllActiveSession]");
+            var top5 = resultAll.Take(5);
             foreach (var a in top5)
             {
                 Console.WriteLine(a.SessionId);
@@ -29,13 +29,7 @@ public class Program
 
     }
 }
-[QueryName("[BMS2].[GetActiveSession]")]
 public class ActiveSessionQuery 
-{
-    public string EmployeeID { get; set; }
-}
-[QueryName("[BMS2].[GetAllActiveSession]")]
-public class ActiveAllSessionQuery
 {
     public string EmployeeID { get; set; }
 }
