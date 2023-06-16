@@ -8,6 +8,7 @@ public class Program
     {
         try
         {
+            DapperWrapper.Configure("passConnectionHere");
             var result = await  new ActiveSessionQuery { EmployeeID = "BPW41175" }.Query<ActiveSessionResult>("[BMS2].[GetActiveSession]");
             Console.WriteLine(result.SessionId);
 
