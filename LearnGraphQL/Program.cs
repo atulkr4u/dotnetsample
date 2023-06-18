@@ -40,18 +40,6 @@ public class Program
     }
 }
 /*
-Sample Query:
-    query {
-  searchCustomer(searchCustomer: { customerNameKeyWord: "At" }) {
-    customerId
-    city
-  }
-}
 
-curl --location --request POST 'https://localhost:7079/graphql/' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "query": "    query {\n  searchCustomer(searchCustomer: { customerNameKeyWord: \"At\" }) {\n    customerId\n    city\n  }\n}"
-}'
 
 */
