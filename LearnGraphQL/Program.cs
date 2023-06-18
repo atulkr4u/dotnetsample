@@ -14,7 +14,7 @@ public class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-        builder.Services.AddGraphQLServer();
+        builder.Services.AddGraphQLServer().AddQueryType<CustomerDb>(); ;
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -39,11 +39,12 @@ public class Program
         app.Run();
     }
 }
-
-//Sample Query:
-//    query {
-//  searchCustomer(searchCustomer: { customerNameKeyWord: "At" }) {
-//    customerId
-//    city
-//  }
-//}
+/*
+Sample Query:
+    query {
+  searchCustomer(searchCustomer: { customerNameKeyWord: "At" }) {
+    customerId
+    city
+  }
+}
+*/
