@@ -1,4 +1,5 @@
-﻿query {
+﻿Basic Query:
+query {
   customers(searchCustomer: { customerId: 50 }) {
     customerId
     customerName
@@ -14,6 +15,84 @@
     orderDate
   }
 }
+
+--Add Paging
+query {
+  customers(
+    searchCustomer: { customerId: 5 }
+  ) {
+    nodes {
+      customerId
+      customerName
+      pincode
+      address
+      city
+    }
+  }
+  orders(
+    searchOrder: { customerId: 5 }
+    first: 5
+  ) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    edges {
+      cursor
+      node {
+        orderId
+        customerId
+        productName
+        price
+        orderDate
+      }
+    }
+  }
+}
+----Next Page :
+
+query {
+  customers(
+    searchCustomer: { customerId: 5 }
+  ) {
+    nodes {
+      customerId
+      customerName
+      pincode
+      address
+      city
+    }
+  }
+  orders(
+    searchOrder: { customerId: 5 }
+    first: 5
+    after: "OQ=="
+  ) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    edges {
+      cursor
+      node {
+        orderId
+        customerId
+        productName
+        price
+        orderDate
+      }
+    }
+  }
+}
+
+
+
+
+
 
 
 

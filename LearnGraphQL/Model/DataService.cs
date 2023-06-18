@@ -37,7 +37,7 @@ namespace LearnGraphQL.Model
 
     public class CustomerDb
     {
-        //[UsePaging]
+        [UsePaging]
         public  IQueryable<Customer> Customers(SearchCustomer? searchCustomer)
         {
 
@@ -66,6 +66,7 @@ namespace LearnGraphQL.Model
             }
             return result.AsQueryable();
         }
+        [UsePaging]
         public IQueryable<Order> Orders(SearchOrder? searchOrder)
         {
             var result = new List<Order>();
@@ -100,7 +101,7 @@ namespace LearnGraphQL.Model
             {
                 if(_customers==null)
                 {
-                    _customers = DummyDataGenerator.GenerateDummyCustomers(100);
+                    _customers = DummyDataGenerator.GenerateDummyCustomers(10);
                 }
                 return _customers;
             }
@@ -111,7 +112,12 @@ namespace LearnGraphQL.Model
             {
                 if (_orders == null)
                 {
-                    _orders = DummyOrderDataGenerator.GenerateDummyOrders(1000);
+                    _orders = new List<Order>();
+                    foreach (var c in Customers)
+                    {
+                        _orders.AddRange(DummyOrderDataGenerator.GenerateDummyOrders(c.CustomerId, 1000));
+                    }
+                    
                 }
                 return _orders;
             }
@@ -185,7 +191,7 @@ namespace LearnGraphQL.Model
 
         private static string[] productNames = { "Widget", "Gadget", "Thingamajig", "Doohickey", "Contraption", "Device", "Apparatus", "Invention", "Tool", "Equipment" };
 
-        public static List<Order> GenerateDummyOrders(int count)
+        public static List<Order> GenerateDummyOrders(int custId,int count)
         {
             List<Order> orders = new List<Order>();
             for (int i = 1; i <= count; i++)
@@ -193,7 +199,7 @@ namespace LearnGraphQL.Model
                 Order order = new Order
                 {
                     OrderId = i,
-                    CustomerId = GetCustomerId(),
+                    CustomerId = custId,
                     ProductName = GetRandomProductName(),
                     Price = GetRandomPrice(),
                     OrderDate = GetRandomOrderDate()
