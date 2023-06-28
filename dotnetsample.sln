@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExtender", "DapperExt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnGraphQL", "LearnGraphQL\LearnGraphQL.csproj", "{F7AF56F8-89EC-4C39-A029-63AEBC501116}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryWolvorine", "TryWolvorine\TryWolvorine.csproj", "{9F950A68-11AB-417F-AEC2-E2BEFC2D6343}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F7AF56F8-89EC-4C39-A029-63AEBC501116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7AF56F8-89EC-4C39-A029-63AEBC501116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7AF56F8-89EC-4C39-A029-63AEBC501116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F950A68-11AB-417F-AEC2-E2BEFC2D6343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F950A68-11AB-417F-AEC2-E2BEFC2D6343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F950A68-11AB-417F-AEC2-E2BEFC2D6343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F950A68-11AB-417F-AEC2-E2BEFC2D6343}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
